@@ -68,7 +68,8 @@ createAccountBtn.addEventListener('click', function (event) {
                 type: 'POST',
                 data: data,
                 success: function (response) {
-                    if(response.success) {
+                    if(response.status == 'success') {
+                        alert(response.message);
                         window.location.href = '/login';
                     } else {
                         alert(response.message);
