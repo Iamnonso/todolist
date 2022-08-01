@@ -5,7 +5,7 @@
 </p>
 
 ## [Goal Tracker](https://goaltrackers.herokuapp.com/)
-Fils is hosted on heroku with domain name [https://filxsms.herokuapp.com](https://goaltrackers.herokuapp.com/)
+Fils is hosted on heroku with domain name [https://goaltrackers.herokuapp.com/](https://goaltrackers.herokuapp.com/)
 
 This repo is for assignment purpose **CODE UNIVERSITY OF APPLIED SCIENCE**
 
