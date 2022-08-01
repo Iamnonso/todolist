@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {%block title %} TodoList {% endblock %} {% block body %}
+<div class="container">
+    <div class="logo">
+        <img src="https://neurofied.com/wp-content/uploads/2021/01/task2fpractice-management-2.png" alt="logo">
+    </div>
+    <div class="login">
+        <div id="login_to_account"></div>
+        <div class="form_input">
+            <label for="username">Email</label>
+            <input type="text" id="email" placeholder="Enter your email">
+        </div>
+        <div class="form_input">
+            <label for="username">Username</label>
+            <input type="text" id="user" placeholder="Enter your Username">
+        </div>
+        <div class="form_input">
+            <label for="username">Fullname</label>
+            <input type="text" id="Fullname" placeholder="Enter your Fullname">
+        </div>
+        <div class="form_input">
+            <label for="username">Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+        </div>
+        <div class="form_input">
+            <label for="username">Verify Password</label>
+            <input type="password" id="verifypassword" placeholder="Enter password">
+        </div>
+        <div class="form_input">
+            <button name="login_to_account" id="create_account">Create Account</button>
+        </div>
+        <div class="login_footer">
+            <a href="{{ url_for('auth.forgot_password') }}">Forgot Password?</a> <a href="{{ url_for('auth.login')}}">Back to login</a>
+        </div>
+        
+    </div>
+</div>
+<script src="{{url_for('static', filename='/js/app.js')}}" async defer></script>
+{% endblock %}

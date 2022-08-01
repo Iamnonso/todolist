@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {%block title %} TodoList {% endblock %} {% block body %}
+<div class="containers" style="background-color: #fff; width: 100%; height: 100%;">
+    <div class="login" style="background-color: #fff;">
+        <div class="form_input">
+            <label for="username">Task Heading</label>
+            <input type="text" id="heading" placeholder="Enter Task Heading" value="{{ task['taskheading'] }}">
+        </div>
+        <div class="form_input">
+            <label for="username">Description</label>
+            <input type="text" id="description" placeholder="Enter Description" value="{{ task['description'] }}">
+        </div>
+        <div class="form_input">
+            <input type="hidden" id="taskid" value="{{ task['id'] }}">
+            <label for="username">Priority</label>
+            <select  id="priority">
+                <option value="">Select</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+        </div>
+        <div class="form_input">
+            <button name="login_to_account" id="update_task" onclick="updateTask()">Update Task</button>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="{{url_for('static', filename='/js/worker.js')}}" async defer></script>
+{% endblock %}

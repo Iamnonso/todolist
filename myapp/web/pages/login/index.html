@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {%block title %} TodoList {% endblock %} {% block body %}
+<div class="container">
+    <div class="logo">
+        <img src="https://neurofied.com/wp-content/uploads/2021/01/task2fpractice-management-2.png" alt="logo">
+    </div>
+    <div class="login">
+        <div id="create_account"></div>
+        <div class="form_input">
+            <label for="username">Email/Username</label>
+            <input type="text" id="user" placeholder="Enter your email or username">
+        </div>
+        <div class="form_input">
+            <label for="username">Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+        </div>
+        <div class="form_input">
+            <button name="login_to_account" id="login_to_account">Login</button>
+        </div>
+        <div class="login_footer">
+            <a href="{{ url_for('auth.forgot_password')}}">Forgot Password?</a> <a href="{{ url_for('auth.create_account')}}">Create Account</a>
+        </div>
+        
+    </div>
+</div>
+<script src="{{url_for('static', filename='/js/app.js')}}" async defer></script>
+{% endblock %}
